@@ -4,6 +4,7 @@ public class FiringSquad {
     private Integer maxSize;
     private Integer currentSize;
     private Boolean aimingAtTarget;
+    private Target target;
 
     public FiringSquad() {
         this.maxSize = 10;
@@ -33,5 +34,17 @@ public class FiringSquad {
 
     public void setAimingAtTarget(Boolean aimingAtTarget) {
         this.aimingAtTarget = aimingAtTarget;
+    }
+
+    public Target getTarget() {
+        return target;
+    }
+
+    public void setTarget(Target target) {
+        this.target = target;
+    }
+
+    public void concentratedFire() {
+
     }
 }

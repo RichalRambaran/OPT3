@@ -4,11 +4,13 @@ public class Target {
     private Integer distance;
     private Integer bulletHits;
     private Boolean alive;
+    private Integer threshold;
 
-    public Target(Integer distance) {
+    public Target(Integer distance, Integer threshold) {
         this.distance = distance;
         this.bulletHits = 0;
         this.alive = true;
+        this.threshold = threshold;
     }
 
     public Integer getDistance() {
@@ -33,5 +35,11 @@ public class Target {
 
     public void setAlive(Boolean alive) {
         this.alive = alive;
+    }
+
+    private void checkIfAlive() {
+        if (bulletHits >= threshold) {
+            alive = false;
+        }
     }
 }
