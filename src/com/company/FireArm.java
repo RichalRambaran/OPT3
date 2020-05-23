@@ -6,10 +6,9 @@ public abstract class FireArm {
     private Magazine magazine;
     private Recommendation recommendation;
 
-    public FireArm(Integer maxRange, Integer bulletsPerBurst, Integer maxAmmunition) {
+    public FireArm(Integer maxRange, Integer bulletsPerBurst) {
         this.maxRange = maxRange;
         this.bulletsPerBurst = bulletsPerBurst;
-        this.magazine = new Magazine(maxAmmunition);
     }
 
     public Integer getMaxRange() {
