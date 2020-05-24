@@ -2,11 +2,9 @@ package com.company;
 
 public abstract class Compartment {
     private Integer maxCapacity;
-    private Integer currentCapacity;
 
     public Compartment(Integer maxCapacity) {
         this.maxCapacity = maxCapacity;
-        this.currentCapacity = maxCapacity;
     }
 
     public Integer getMaxCapacity() {
@@ -17,11 +15,7 @@ public abstract class Compartment {
         this.maxCapacity = maxCapacity;
     }
 
-    public Integer getCurrentCapacity() {
-        return currentCapacity;
-    }
+    public abstract Integer getCurrentCapacity();
 
-    public void setCurrentCapacity(Integer currentCapacity) {
-        this.currentCapacity = currentCapacity;
-    }
+    public abstract void fillToMaxCapacity();
 }
