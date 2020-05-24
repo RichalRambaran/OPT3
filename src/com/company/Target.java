@@ -27,6 +27,7 @@ public class Target {
 
     public void setBulletHits(Integer bulletHits) {
         this.bulletHits = bulletHits;
+        checkIfAlive();
     }
 
     public Boolean getAlive() {
