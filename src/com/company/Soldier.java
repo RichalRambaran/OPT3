@@ -7,6 +7,14 @@ public class Soldier extends Troop {
         super(name);
     }
 
+    public FireArm getFireArm() {
+        return fireArm;
+    }
+
+    public void setFireArm(FireArm fireArm) {
+        this.fireArm = fireArm;
+    }
+
     public void grabMachineGun() {
         int index = 0;
         if (FireArmDeposit.getFireArmDeposit().getMachineGunCompartment().getMachineGuns().get(index) != null) {
@@ -42,21 +50,21 @@ public class Soldier extends Troop {
     public void shootBurst(Target target) {
         String startingText = getName() + " couldn't shoot the target because";
         if (isInRange(target)) {
-            if (isAlive(target)) {
+            if (targetIsAlive(target)) {
                 if (hasEnoughAmmunition()) {
                     carryOutShot(target);
-                    System.out.println(getName() + " successfully shot the target");
+                    System.out.println(getName() + " successfully shot the target."); // O4
                 }
                 else {
-                    System.out.println(startingText + " there isn't enough ammunition in the magazine left.");
+                    System.out.println(startingText + " there isn't enough ammunition in the magazine left."); // O3
                 }
             }
             else {
-                System.out.println(startingText + " the target because the target is already dead.");
+                System.out.println(startingText + " the target is already dead."); // O2
             }
         }
         else {
-            System.out.println(startingText + " the target is out of range.");
+            System.out.println(startingText + " the target is out of range."); // O1
         }
     }
 
@@ -66,7 +74,7 @@ public class Soldier extends Troop {
         return isInRange;
     }
 
-    private Boolean isAlive(Target target) {
+    private Boolean targetIsAlive(Target target) {
         boolean isAlive;
         isAlive = target.getAlive();
         return isAlive;
