@@ -8,6 +8,6 @@ public class Supplier extends Troop {
     public void reStockCompartments() {
         FireArmDeposit.getFireArmDeposit().getMachineGunCompartment().fillToMaxCapacity();
         FireArmDeposit.getFireArmDeposit().getRifleCompartment().fillToMaxCapacity();
-        System.out.println("All firearm deposit compartments have been restocked");
+        System.out.println(getName() + " has restocked all compartments of the firearm deposit.");
     }
 }

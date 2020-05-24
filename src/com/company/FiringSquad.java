@@ -49,4 +49,17 @@ public class FiringSquad {
     public void setSoldiers(ArrayList<Soldier> soldiers) {
         this.soldiers = soldiers;
     }
+
+    public void addSoldier(Soldier soldier) {
+        if (soldiers.size() + 1 <= maxSize) {
+            soldiers.add(soldier);
+        }
+        else {
+            System.out.println("The firing squad is already full.");
+        }
+    }
+
+    public void removeSoldier(Soldier soldier) {
+        soldiers.remove(soldier);
+    }
 }

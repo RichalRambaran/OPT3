@@ -1,6 +1,6 @@
 package com.company;
 
-public abstract class Compartment {
+public abstract class Compartment { // giving compartments for firearms a superclass prevents duplicate code
     private Integer maxCapacity;
 
     public Compartment(Integer maxCapacity) {

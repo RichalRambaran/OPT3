@@ -1,6 +1,6 @@
 package com.company;
 
-public class Magazine {
+public class Magazine { // making an separate class for magazine instead of lumping it together with firearm prevents large class
     private Integer maxAmmunition;
     private Integer currentAmmunition;
 
